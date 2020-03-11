@@ -1,0 +1,11 @@
+proj5: token.o classFunc.o
+	g++ -o proj5 token.o classFunc.o
+
+token.o: token.cpp infix.h
+	g++ -c token.cpp
+
+classFunc.o: classFunc.cpp infix.h
+	g++ -c classFunc.cpp
+
+clean:
+	rm token.o classFunc.o proj5
